@@ -82,7 +82,7 @@ class MineSweeper {
     }
   }
 
-  flip(x: number, y: number, fliped = []) {
+  flip(x: number, y: number, fliped: string[] = []) {
     if (this.pass === false) return [...this.lights]
 
     const s = `${x},${y}`
@@ -136,7 +136,7 @@ class MineSweeper {
     return [...this.lights]
   }
 
-  flag(x, y) {
+  flag(x: number, y: number) {
     if (this.pass !== null) return [...this.flags]
 
     const s = `${x},${y}`

@@ -10,7 +10,7 @@ function App() {
   const [debug, setDebug] = useState(true)
 
   const handleClick = useCallback(
-    (i, j) => {
+    (i: number, j: number) => {
       if (!data) return
       const res = data.flip(i, j)
       setFlipData(res)
@@ -20,7 +20,7 @@ function App() {
   )
 
   const handleRightClick = useCallback(
-    (e, i, j) => {
+    (e: React.MouseEvent<HTMLDivElement, MouseEvent>, i: number, j: number) => {
       if (!data) return
       e.preventDefault()
 
@@ -57,7 +57,7 @@ function App() {
           style={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
           }}
         >
           <div>
